@@ -1,0 +1,39 @@
+[
+  {
+    "players":
+    [
+      {
+        "year": 2017,
+        "white": 19.1,
+        "black": 74.4,
+        "latino": "4.9",
+        "asian" : "0.7",
+        "other": "0.9"
+      },
+      {
+        "year": 2016,
+        "white": 19.1,
+        "black": 74.4,
+        "latino": "4.9",
+        "asian" : "0.7",
+        "other": "0.9"
+      },
+      {
+        "year": 2015,
+        "white": 19.1,
+        "black": 74.4,
+        "latino": "4.9",
+        "asian" : "0.7",
+        "other": "0.9"
+      },
+      {
+        "year": 2014,
+        "white": 19.1,
+        "black": 74.4,
+        "latino": "4.9",
+        "asian" : "0.7",
+        "other": "0.9"
+      }
+    ]
+  }
+]
