@@ -37,38 +37,45 @@ var drawChart = function(dataset,idName,screen,margins)
   var graphHeight = screen.height-margins.top-margins.bottom;
   var barWidth = graphWidth/dataset.length;
   var borderWidth = 1;
+  var padding = 20;
 
   var stack = d3.stack()
                 .keys(["White","Black", "Latino", "Asian", "Other"]);
   //Data, stacked
   var series = stack(dataset);
 
-  console.log("Normal", dataset);
+  //console.log("Normal", dataset);
   console.log("Series",series);
 
   //Set up scales
-	var xScale = d3.scaleBand()
-		.domain(d3.range(dataset.length))
-		.range([0, graphWidth])
-		.paddingInner(.8);
+  var xScale = d3.scaleBand()
+                  .domain(d3.range(dataset.length))
+                  .range([0, graphWidth])
+                  .paddingInner(.8);
 
-	var yScale = d3.scaleLinear()
-		.domain([0,
-			d3.max(dataset, function(d) {
-				return d.White + d.Black + d.Latino + d.Asian + d.Other;
-			})
-		])
-		.range([graphHeight, 0]);
+  var yScale = d3.scaleLinear()
+                  .domain([0, d3.max(dataset, function(d) {	return d.White + d.Black + d.Latino + d.Asian + d.Other;})
+                  ])
+                  .range([graphHeight, 0]);
 
-  var yAxisScale = d3.scaleLinear()
-                .domain([0, 100])
-                .range([graphHeight, 0]);
+	var xAxisScale = d3.scaleOrdinal()
+                  .domain([d3.min(dataset, function(d) { return d.Year; }),d3.max(dataset, function(d) { return d.Year; })])
+                  // .domain(["1990","1991","1992","1993","1994","1995","1996","1997",
+                  //           "1998","1999","2000","2001","2002","2003","2004","2005",
+                  //         "2006","2007","2008","2009","2010","2011","2012","2013",
+                  //       "2014","2015","2016","2017"])
+                  .range([0,graphWidth + 27]); // Includes paddingInner
 
-  var yAxis = d3.axisLeft().scale(yAxisScale);
+	var yAxisScale = d3.scaleLinear()
+              		.domain([0, d3.max(dataset, function(d) {	return d.White + d.Black + d.Latino + d.Asian + d.Other;})             		])
+              		.range([graphHeight,2.1]);
 
   var xAxis = d3.axisBottom()
-                .scale(xScale)
-                .tickValues([]);
+                .scale(xAxisScale)
+                .ticks(28);
+
+  var yAxis = d3.axisLeft()
+                .scale(yAxisScale);
 
 	// Colors
 	var colors = d3.scaleOrdinal(d3.schemeCategory10);
@@ -96,36 +103,20 @@ var drawChart = function(dataset,idName,screen,margins)
                   .attr("x",function(d,i) { return margins.left + xScale(i); })
                   .attr("y", function(d) { return yScale(d[1]); });
 
-      svg.selectAll("text")
-       .data(dataset)
-       .enter()
-       .append("text")
-       .text(function(d) { return d.Year;})
-       .attr("x",function(d,i) { return xScale(i); })
-       .attr("y",function(d) {return graphHeight + 15})
-       //.attr("transform", "translate(" )
-       .attr("fill", function(d)
-          {return "black";})
-       //.attr("font-weight", "bold")
   var xAxisGraphic = svg.append('g')
-                        .call(xAxis)
-                        .attr("transform","translate("+(margins.left) +"," +(graphHeight)+")");
+                          .attr("class", "axis")
+                          .attr("transform","translate("+(margins.left) +"," +(graphHeight)+")")
+                          .call(xAxis)
+                          .selectAll("text")
+                          .style("text-anchor", "end")
+                          .attr("dx", "-.8em")
+                          .attr("dy", ".15em")
+                          .attr("transform", "rotate(-65)" );
 
-  var yAxisGraphic = svg.append("g")
+  var yAxisGraphic = groups.append("g")
+                    .attr("class", "axis")
                     .call(yAxis)
                     .attr("transform", function(){
                     return "translate(" + margins.left + "," + (margins.top - 20) + ")";
                     });
-
-    // graphBorder = svg.append("rect")
-    //                   .attr("border-style", "solid")
-    //                   .attr("x", margins.left)
-    //                   .attr("y", margins.top)
-    //                   .attr("width", graphWidth)
-    //                   .attr("height", graphHeight + 15)
-    //                   .attr("fill", "white")
-    //                   .style("stroke", "black")
-    //                   .style("stroke-width", borderWidth)
-    //                   .classed("graph-border", true);
-
 }
