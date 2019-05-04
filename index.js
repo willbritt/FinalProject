@@ -18,7 +18,12 @@ dataP.then(function(data)
     right: 100
   }
 
-  dataset = data[0].Players;
+  //dataset = data[0].Players;
+  //dataset = data[0].Owners;
+  dataset = data[0].Coaches;
+
+  formattedData = [data[0].Players, data[0].Owners, data[0].Coaches]
+  //console.log("formatted data", formattedData);
 
   drawChart(dataset,"#chart", screen, margins);
 
@@ -31,7 +36,7 @@ function(err)
 
 var drawChart = function(dataset,idName,screen,margins)
 {
-  console.log("dataset", dataset);
+  //console.log("dataset", dataset);
 
   var graphWidth = screen.width-margins.left-margins.right;
   var graphHeight = screen.height-margins.top-margins.bottom;
@@ -41,11 +46,12 @@ var drawChart = function(dataset,idName,screen,margins)
 
   var stack = d3.stack()
                 .keys(["White","Black", "Latino", "Asian", "Other"]);
+
   //Data, stacked
   var series = stack(dataset);
 
-  //console.log("Normal", dataset);
-  console.log("Series",series);
+  //Data,series
+  //console.log("Series",series);
 
   //Set up scales
   var xScale = d3.scaleBand()
@@ -64,7 +70,7 @@ var drawChart = function(dataset,idName,screen,margins)
                   //           "1998","1999","2000","2001","2002","2003","2004","2005",
                   //         "2006","2007","2008","2009","2010","2011","2012","2013",
                   //       "2014","2015","2016","2017"])
-                  .range([0,graphWidth + 27]); // Includes paddingInner
+                  .range([0,graphWidth + dataset.length]); // Includes paddingInner
 
 	var yAxisScale = d3.scaleLinear()
               		.domain([0, d3.max(dataset, function(d) {	return d.White + d.Black + d.Latino + d.Asian + d.Other;})             		])
@@ -82,8 +88,8 @@ var drawChart = function(dataset,idName,screen,margins)
 
   // SVG
 	var svg = d3.select(idName)
-				.attr("width", screen.width)
-				.attr("height", screen.height);
+				.attr("width", screen.width + margins.left + margins.right)
+				.attr("height", screen.height + margins.top + margins.bottom);
 
   // Add a group for each row of data
   var groups = svg.selectAll("g")

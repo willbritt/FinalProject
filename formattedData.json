@@ -218,6 +218,357 @@
         "Asian" : 0.7,
         "Other": 0.9
       }
+    ],
+
+    "Owners":
+    [
+      {
+        "Year": 1998,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1999,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2000,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2001,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2002,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2004,
+        "White": 96.0,
+        "Black": 4.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2005,
+        "White": 91.0,
+        "Black": 9.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2006,
+        "White": 96.4,
+        "Black": 0.0,
+        "Latino": 3.6,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2007,
+        "White": 96.8,
+        "Black": 0.0,
+        "Latino": 3.2,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2008,
+        "White": 96.7,
+        "Black": 0.0,
+        "Latino": 3.3,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2009,
+        "White": 96.7,
+        "Black": 0.0,
+        "Latino": 3.3,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2010,
+        "White": 98.0,
+        "Black": 0.0,
+        "Latino": 2.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2011,
+        "White": 97.5,
+        "Black": 0.0,
+        "Latino": 2.5,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2012,
+        "White": 96.4,
+        "Black": 1.8,
+        "Latino": 1.8,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2013,
+        "White": 98.0,
+        "Black": 2.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2014,
+        "White": 94.4,
+        "Black": 2.8,
+        "Latino": 0.0,
+        "Asian" : 2.8,
+        "Other": 0.0
+      },
+      {
+        "Year": 2015,
+        "White": 95.0,
+        "Black": 2.5,
+        "Latino": 0.0,
+        "Asian" : 2.5,
+        "Other": 0.0
+      },
+      {
+        "Year": 2016,
+        "White": 95.2,
+        "Black": 2.4,
+        "Latino": 0.0,
+        "Asian" : 2.4,
+        "Other": 0.0
+      },
+      {
+        "Year": 2017,
+        "White": 91.4,
+        "Black": 2.9,
+        "Latino": 0.0,
+        "Asian" : 2.9,
+        "Other": 2.9
+      }
+    ],
+    "Coaches":
+    [
+      {
+        "Year": 1993,
+        "White": 74.1,
+        "Black": 25.9,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1994,
+        "White": 81.5,
+        "Black": 18.5,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1995,
+        "White": 81.5,
+        "Black": 18.5,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1996,
+        "White": 79.3,
+        "Black": 20.7,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1997,
+        "White": 75.9,
+        "Black": 24.1,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1998,
+        "White": 82.8,
+        "Black": 17.2,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1999,
+        "White": 86.2,
+        "Black": 13.8,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2000,
+        "White": 79.3,
+        "Black": 20.7,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2001,
+        "White": 65.5,
+        "Black": 34.5,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2002,
+        "White": 51.7,
+        "Black": 48.3,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2004,
+        "White": 63.3,
+        "Black": 36.7,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2005,
+        "White": 60.0,
+        "Black": 40.0,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2006,
+        "White": 63.3,
+        "Black": 36.7,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2007,
+        "White": 60.0,
+        "Black": 40.0,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2008,
+        "White": 60.0,
+        "Black": 40.0,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2009,
+        "White": 60.0,
+        "Black": 36.7,
+        "Asian" : 3.3,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2010,
+        "White": 70.0,
+        "Black": 26.7,
+        "Asian" : 3.3,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2011,
+        "White": 66.7,
+        "Black": 30.0,
+        "Asian" : 3.3,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2012,
+        "White": 46.7,
+        "Black": 46.7,
+        "Asian" : 3.3,
+        "Latino": 3.3,
+        "Other": 0.0
+      },
+      {
+        "Year": 2013,
+        "White": 53.3,
+        "Black": 43.3,
+        "Asian" : 3.3,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2014,
+        "White": 56.7,
+        "Black": 40.0,
+        "Asian" : 3.3,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2015,
+        "White": 66.7,
+        "Black": 30.0,
+        "Asian" : 3.3,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2016,
+        "White": 70.0,
+        "Black": 26.7,
+        "Asian" : 3.3,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2017,
+        "White": 70.0,
+        "Black": 20.0,
+        "Asian" : 3.3,
+        "Latino": 3.3,
+        "Other": 3.3
+      }
     ]
   }
 ]
