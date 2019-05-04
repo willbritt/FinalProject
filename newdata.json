@@ -1,1 +1,332 @@
-
+[
+  {
+    "year":"1990",
+    "category":
+     {
+      "players":
+       {
+        "White": 25.0,
+        "Black": 75.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 74.1,
+        "Black": 25.9,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"1991",
+    "category":
+     {
+      "players":
+       {
+         "White": 28.0,
+         "Black": 72.0,
+         "Latino": 0.0,
+         "Asian" : 0.0,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 74.1,
+        "Black": 25.9,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"1992",
+    "category":
+     {
+      "players":
+       {
+         "White": 25.0,
+         "Black": 75.0,
+         "Latino": 0.0,
+         "Asian" : 0.0,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 74.1,
+        "Black": 25.9,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"1993",
+    "category":
+     {
+      "players":
+       {
+         "White": 23.0,
+         "Black": 77.0,
+         "Latino": 0.0,
+         "Asian" : 0.0,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 74.1,
+        "Black": 25.9,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"1994",
+    "category":
+     {
+      "players":
+       {
+         "White": 21.0,
+         "Black": 79.0,
+         "Latino": 0.0,
+         "Asian" : 0.0,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 81.5,
+        "Black": 18.5,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"1995",
+    "category":
+     {
+      "players":
+       {
+         "White": 18.0,
+         "Black": 82.0,
+         "Latino": 0.0,
+         "Asian" : 0.0,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 81.5,
+        "Black": 18.5,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"1996",
+    "category":
+     {
+      "players":
+       {
+         "White": 20.0,
+         "Black": 80.0,
+         "Latino": 0.0,
+         "Asian" : 0.0,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 79.3,
+        "Black": 20.7,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"1997",
+    "category":
+     {
+      "players":
+       {
+         "White": 20.0,
+         "Black": 79.0,
+         "Latino": 0.2,
+         "Asian" : 0.2,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 75.9,
+        "Black": 24.1,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"1998",
+    "category":
+     {
+      "players":
+       {
+         "White": 23.0,
+         "Black": 77.0,
+         "Latino": 0.2,
+         "Asian" : 0.0,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 82.8,
+        "Black": 17.2,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"1999",
+    "category":
+     {
+      "players":
+       {
+         "White": 21.0,
+         "Black": 78.0,
+         "Latino": 1.0,
+         "Asian" : 0.0,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 86.2,
+        "Black": 13.8,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  },
+  {
+    "year":"2000",
+    "category":
+     {
+      "players":
+       {
+         "White": 22.0,
+         "Black": 78.0,
+         "Latino": 0.2,
+         "Asian" : 0.0,
+         "Other": 0.0
+      },
+      "coaches":
+      {
+        "White": 79.3,
+        "Black": 20.7,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      "owners":
+      {
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      }
+    }
+  }
+]

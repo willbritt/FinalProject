@@ -23,7 +23,7 @@ dataP.then(function(data)
   dataset = data[0].Coaches;
 
   formattedData = [data[0].Players, data[0].Owners, data[0].Coaches]
-  //console.log("formatted data", formattedData);
+  console.log("formatted data", formattedData);
 
   drawChart(dataset,"#chart", screen, margins);
 

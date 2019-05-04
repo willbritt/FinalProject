@@ -107,6 +107,14 @@
         "Other": 0.0
       },
       {
+        "Year": 2003,
+        "White": 20.0,
+        "Black": 78.0,
+        "Latino": 1.0,
+        "Asian" : 0.2,
+        "Other": 0.0
+      },
+      {
         "Year": 2004,
         "White": 22.2,
         "Black": 75.9,
@@ -223,6 +231,70 @@
     "Owners":
     [
       {
+        "Year": 1990,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1991,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1992,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1993,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1994,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1995,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1996,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1997,
+        "White": 100.0,
+        "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
         "Year": 1998,
         "White": 100.0,
         "Black": 0.0,
@@ -258,6 +330,14 @@
         "Year": 2002,
         "White": 100.0,
         "Black": 0.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2003,
+        "White": 96.0,
+        "Black": 4.0,
         "Latino": 0.0,
         "Asian" : 0.0,
         "Other": 0.0
@@ -378,6 +458,30 @@
     "Coaches":
     [
       {
+        "Year": 1990,
+        "White": 74.1,
+        "Black": 25.9,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1991,
+        "White": 74.1,
+        "Black": 25.9,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1992,
+        "White": 74.1,
+        "Black": 25.9,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
         "Year": 1993,
         "White": 74.1,
         "Black": 25.9,
@@ -453,6 +557,14 @@
         "Year": 2002,
         "White": 51.7,
         "Black": 48.3,
+        "Asian" : 0.0,
+        "Latino": 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2003,
+        "White": 63.3,
+        "Black": 36.7,
         "Asian" : 0.0,
         "Latino": 0.0,
         "Other": 0.0
