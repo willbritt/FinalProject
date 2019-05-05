@@ -21,6 +21,7 @@ dataP.then(function(data)
   datasetP = data[0].NBA.Players;
   datasetO = data[0].NBA.Owners;
   datasetC = data[0].NBA.Coaches;
+  datasetP2 = data[1].NFL.Players;
 
   formattedData = [data[0].Players, data[0].Owners, data[0].Coaches]
   //console.log("formatted data", formattedData);
@@ -180,11 +181,11 @@ var initEventListeners = function(){
         {
             d3.selectAll("svg > *").remove();
             var dataset = data[0].NBA.Players;
-            drawChart(dataset,"#chart1", screen, margins, "Players");
+            drawChart(dataset,"#chart1", screen, margins, "NBA Players");
             var dataset = data[0].NBA.Coaches;
-            drawChart(dataset,"#chart2", screen, margins, "Coaches");
+            drawChart(dataset,"#chart2", screen, margins, "NBA Coaches");
             var dataset = data[0].NBA.Owners;
-            drawChart(dataset,"#chart3", screen, margins, "Owners");
+            drawChart(dataset,"#chart3", screen, margins, "NBA Owners");
         });
       });
 
@@ -195,6 +196,10 @@ var initEventListeners = function(){
         dataP.then(function(data)
         {
           d3.selectAll("svg > *").remove();
+          var dataset = data[1].NFL.Players;
+          drawChart(dataset,"#chart1", screen, margins, "NFL Players");
+          var dataset = data[1].NFL.Coaches;
+          drawChart(dataset,"#chart2", screen, margins, "NFL Coaches");
         });
       });
 
@@ -212,9 +217,9 @@ var initEventListeners = function(){
 var initGraph = function(){
   dataP.then(function(data)
   {
-      drawChart(datasetP,"#chart1", screen, margins, "Players");
-      drawChart(datasetC,"#chart2", screen, margins, "Coaches");
-      drawChart(datasetO,"#chart3", screen, margins, "Owners");
+      drawChart(datasetP,"#chart1", screen, margins, "NBA Players");
+      drawChart(datasetC,"#chart2", screen, margins, "NBA Coaches");
+      drawChart(datasetO,"#chart3", screen, margins, "NBA Owners");
       initEventListeners();
   });
 }

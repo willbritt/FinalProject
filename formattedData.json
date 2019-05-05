@@ -685,5 +685,248 @@
       }
     ]
   }
+},
+  {
+  "NFL":
+  {
+    "Players":
+    [
+      {
+        "Year": 1990,
+        "White": 39.0,
+        "Black": 61.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1991,
+        "White": 36.0,
+        "Black": 62.0,
+        "Latino": 2.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1992,
+        "White": 30.0,
+        "Black": 68.0,
+        "Latino": 1.0,
+        "Asian" : 0.0,
+        "Other": 1.0
+      },
+      {
+        "Year": 1993,
+        "White": 35.0,
+        "Black": 65.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 1994,
+        "White": 31.0,
+        "Black": 68.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 1.0
+      },
+      {
+        "Year": 1995,
+        "White": 31.0,
+        "Black": 67.0,
+        "Latino": 0.0,
+        "Asian" : 0.0,
+        "Other": 2.0
+      },
+      {
+        "Year": 1996,
+        "White": 31.0,
+        "Black": 66.0,
+        "Latino": 1.0,
+        "Asian" : 0.0,
+        "Other": 2.0
+      },
+      {
+        "Year": 1997,
+        "White": 33.0,
+        "Black": 65.0,
+        "Latino": 0.5,
+        "Asian" : 0.0,
+        "Other": 1.5
+      },
+      {
+        "Year": 1998,
+        "White": 32.0,
+        "Black": 67.0,
+        "Latino": 0.5,
+        "Asian" : 0.0,
+        "Other": 0.5
+      },
+      {
+        "Year": 1999,
+        "White": 32.0,
+        "Black": 67.0,
+        "Latino": 0.5,
+        "Asian" : 0.0,
+        "Other": 0.5
+      },
+      {
+        "Year": 2000,
+        "White": 29.0,
+        "Black": 69.0,
+        "Latino": 1.0,
+        "Asian" : 1.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2001,
+        "White": 29.0,
+        "Black": 69.0,
+        "Latino": 1.0,
+        "Asian" : 1.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2002,
+        "White": 29.0,
+        "Black": 69.0,
+        "Latino": 1.0,
+        "Asian" : 1.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2003,
+        "White": 29.0,
+        "Black": 69.0,
+        "Latino": 1.0,
+        "Asian" : 1.0,
+        "Other": 0.0
+      },
+      {
+        "Year": 2004,
+        "White": 31.5,
+        "Black": 65.5,
+        "Latino": 0.5,
+        "Asian" : 2.0,
+        "Other": 0.5
+      },
+      {
+        "Year": 2005,
+        "White": 31.5,
+        "Black": 65.5,
+        "Latino": 0.5,
+        "Asian" : 2.0,
+        "Other": 0.5
+      },
+      {
+        "Year": 2006,
+        "White": 31.0,
+        "Black": 67.0,
+        "Latino": 0.5,
+        "Asian" : 1.5,
+        "Other": 0.0
+      },
+      {
+        "Year": 2007,
+        "White": 31.0,
+        "Black": 66.0,
+        "Latino": 0.5,
+        "Asian" : 2.0,
+        "Other": 0.5
+      },
+      {
+        "Year": 2008,
+        "White": 31.0,
+        "Black": 66.0,
+        "Latino": 0.5,
+        "Asian" : 2.0,
+        "Other": 0.5
+      },
+      {
+        "Year": 2009,
+        "White": 30.0,
+        "Black": 66.0,
+        "Latino": 1.0,
+        "Asian" : 2.0,
+        "Other": 1.0
+      },
+      {
+        "Year": 2010,
+        "White": 31.0,
+        "Black": 65.0,
+        "Latino": 1.0,
+        "Asian" : 2.0,
+        "Other": 1.0
+      },
+      {
+        "Year": 2011,
+        "White": 31.0,
+        "Black": 65.0,
+        "Latino": 1.0,
+        "Asian" : 2.0,
+        "Other": 1.0
+      },
+      {
+        "Year": 2012,
+        "White": 30.1,
+        "Black": 66.3,
+        "Latino": 0.7,
+        "Asian" : 1.1,
+        "Other": 1.8
+      },
+      {
+        "Year": 2013,
+        "White": 31.0,
+        "Black": 67.3,
+        "Latino": 0.6,
+        "Asian" : 0.7,
+        "Other": 0.5
+      },
+      {
+        "Year": 2014,
+        "White": 28.6,
+        "Black": 68.7,
+        "Latino": 0.7,
+        "Asian" : 1.1,
+        "Other": 0.9
+      },
+      {
+        "Year": 2015,
+        "White": 28.6,
+        "Black": 68.7,
+        "Latino": 0.7,
+        "Asian" : 1.1,
+        "Other": 0.9
+      },
+      {
+        "Year": 2016,
+        "White": 27.4,
+        "Black": 69.7,
+        "Latino": 0.8,
+        "Asian" : 1.9,
+        "Other": 0.2
+      },
+      {
+        "Year": 2017,
+        "White": 27.4,
+        "Black": 69.7,
+        "Latino": 0.8,
+        "Asian" : 1.9,
+        "Other": 0.2
+      }
+    ],
+    "Coaches":
+    [
+      {
+        "Year": 2017,
+        "White": 75.0,
+        "Black": 21.9,
+        "Asian" : 0.0,
+        "Latino": 3.1,
+        "Other": 0.0
+      }
+    ]
+  }
 }
 ]
