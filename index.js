@@ -1,31 +1,33 @@
 var dataP = d3.json("formattedData.json");
 
+var screen =
+{
+  width: 600,
+  height: 400
+}
+
+var margins =
+{
+  top: 40,
+  bottom: 30,
+  left: 50,
+  right: 100
+}
+
 dataP.then(function(data)
 {
   console.log("data",data);
 
-  var screen =
-  {
-    width: 1000,
-    height: 500
-  }
-
-  var margins =
-  {
-    top: 20,
-    bottom: 30,
-    left: 50,
-    right: 100
-  }
-
-  //dataset = data[0].Players;
-  //dataset = data[0].Owners;
-  dataset = data[0].Coaches;
+  datasetP = data[0].NBA.Players;
+  datasetO = data[0].NBA.Owners;
+  datasetC = data[0].NBA.Coaches;
 
   formattedData = [data[0].Players, data[0].Owners, data[0].Coaches]
-  console.log("formatted data", formattedData);
+  //console.log("formatted data", formattedData);
 
-  drawChart(dataset,"#chart", screen, margins);
+  //drawChart(dataset,"#chart1", screen, margins);
+  // drawChart(dataset2,"#chart2", screen, margins);
+  // drawChart(dataset3,"#chart3", screen, margins);
 
 },
 
@@ -34,7 +36,7 @@ function(err)
   console.log(err);
 });
 
-var drawChart = function(dataset,idName,screen,margins)
+var drawChart = function(dataset,idName,screen,margins,title)
 {
   //console.log("dataset", dataset);
 
@@ -103,15 +105,14 @@ var drawChart = function(dataset,idName,screen,margins)
                   .data(function(d) { return d; })
                   .enter()
                   .append('rect')
-                  //.attr("width", xScale.bandwidth())
                   .attr("width", barWidth)
                   .attr("height", function(d) { return yScale(d[0])-yScale(d[1]); })
                   .attr("x",function(d,i) { return margins.left + xScale(i); })
-                  .attr("y", function(d) { return yScale(d[1]); });
+                  .attr("y", function(d) { return margins.top + yScale(d[1]); });
 
   var xAxisGraphic = svg.append('g')
                           .attr("class", "axis")
-                          .attr("transform","translate("+(margins.left) +"," +(graphHeight)+")")
+                          .attr("transform","translate("+(margins.left) +"," +(margins.top + graphHeight)+")")
                           .call(xAxis)
                           .selectAll("text")
                           .style("text-anchor", "end")
@@ -123,6 +124,98 @@ var drawChart = function(dataset,idName,screen,margins)
                     .attr("class", "axis")
                     .call(yAxis)
                     .attr("transform", function(){
-                    return "translate(" + margins.left + "," + (margins.top - 20) + ")";
+                    return "translate(" + margins.left + "," + (margins.top) + ")";
                     });
+
+  var chartTitle = groups.append("text")
+                      .attr("x", (graphWidth / 2))
+                      .attr("y", ((margins.top/2) + 5))
+                      .attr("text-anchor", "middle")
+                      .style("font-size", "24px")
+                      .style("text-decoration", "underline")
+                      .style("fill", "Black")
+                      .text(title);
+    // legen
+  var legendLineWidth = 10;
+  var legendLineHeight = 16;
+  var legendLineMargin = 5;
+  var legendColorBarWidth = 30;
+
+  var legend = d3.select(idName)
+                 .append("g")
+                 .attr("font-size", 15)
+                 .attr("transform", "translate(" + (graphWidth + margins.left + 10) + ",0)")
+                 .classed("legend", true);
+
+    var keys = ["White", "Black", "Latino", "Asian","Other"]
+
+   var legendLines = legend.selectAll("g")
+                            .data(keys)
+                            .enter()
+                            .append("g")
+                            .classed("legend-line", true);
+
+        legendLines.append("rect")
+                    .attr("x", 50)
+                    .attr("y", function(d,i){return i*legendLineHeight + i*legendLineMargin + 30})
+                    .attr("width", legendColorBarWidth)
+                    .attr("height", legendLineHeight)
+                    .style("fill", function(d,i) { return colors(i)})
+
+        legendLines.append("text")
+                    .text(function(d){return d;})
+                    .attr("x", legendColorBarWidth + 55)
+                    .attr("y", function(d, i){return i*legendLineHeight + i*legendLineMargin + 43})
+                    .attr("font-size", legendLineHeight)
+  }
+
+//Event handlers defined here
+var initEventListeners = function(){
+
+  //Players button
+    d3.select("#NBA")
+      .on("click", function(d){
+        console.log("NBA button clicked");
+        dataP.then(function(data)
+        {
+            d3.selectAll("svg > *").remove();
+            var dataset = data[0].NBA.Players;
+            drawChart(dataset,"#chart1", screen, margins, "Players");
+            var dataset = data[0].NBA.Coaches;
+            drawChart(dataset,"#chart2", screen, margins, "Coaches");
+            var dataset = data[0].NBA.Owners;
+            drawChart(dataset,"#chart3", screen, margins, "Owners");
+        });
+      });
+
+  //Coaches button
+    d3.select("#NFL")
+      .on("click", function(d){
+        console.log("Coaches button clicked");
+        dataP.then(function(data)
+        {
+          d3.selectAll("svg > *").remove();
+        });
+      });
+
+    //Owners button
+      d3.select("#MLB")
+        .on("click", function(d){
+          console.log("Owners button clicked");
+          dataP.then(function(data)
+          {
+            d3.selectAll("svg > *").remove();
+          });
+        });
 }
+
+var initGraph = function(){
+  dataP.then(function(data)
+  {
+      drawChart(datasetP,"#chart1", screen, margins, "Players");
+      drawChart(datasetC,"#chart2", screen, margins, "Coaches");
+      drawChart(datasetO,"#chart3", screen, margins, "Owners");
+      initEventListeners();
+  });
+}
+initGraph();
