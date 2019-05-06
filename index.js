@@ -183,9 +183,9 @@ var initEventListeners = function(){
             var dataset = data[0].NBA.Players;
             drawChart(dataset,"#chart1", screen, margins, "NBA Players");
             var dataset = data[0].NBA.Coaches;
-            drawChart(dataset,"#chart2", screen, margins, "NBA Coaches");
+            drawChart(dataset,"#chart2", screen, margins, "NBA Head Coaches");
             var dataset = data[0].NBA.Owners;
-            drawChart(dataset,"#chart3", screen, margins, "NBA Owners");
+            drawChart(dataset,"#chart3", screen, margins, "NBA Majority Owners");
         });
       });
 
@@ -199,7 +199,9 @@ var initEventListeners = function(){
           var dataset = data[1].NFL.Players;
           drawChart(dataset,"#chart1", screen, margins, "NFL Players");
           var dataset = data[1].NFL.Coaches;
-          drawChart(dataset,"#chart2", screen, margins, "NFL Coaches");
+          drawChart(dataset,"#chart2", screen, margins, "NFL Head Coaches");
+          var dataset = data[1].NFL.Admin;
+          drawChart(dataset,"#chart3", screen, margins, "NFL Team Administration");
         });
       });
 
@@ -210,6 +212,12 @@ var initEventListeners = function(){
           dataP.then(function(data)
           {
             d3.selectAll("svg > *").remove();
+            var dataset = data[2].MLB.Players;
+            drawChart(dataset,"#chart1", screen, margins, "MLB Players");
+            var dataset = data[2].MLB.Managers;
+            drawChart(dataset,"#chart2", screen, margins, "MLB Managers");
+            var dataset = data[2].MLB.Owners;
+            drawChart(dataset,"#chart3", screen, margins, "MLB Majority Owners");
           });
         });
 }
@@ -218,8 +226,8 @@ var initGraph = function(){
   dataP.then(function(data)
   {
       drawChart(datasetP,"#chart1", screen, margins, "NBA Players");
-      drawChart(datasetC,"#chart2", screen, margins, "NBA Coaches");
-      drawChart(datasetO,"#chart3", screen, margins, "NBA Owners");
+      drawChart(datasetC,"#chart2", screen, margins, "NBA Head Coaches");
+      drawChart(datasetO,"#chart3", screen, margins, "NBA Majority Owners");
       initEventListeners();
   });
 }
