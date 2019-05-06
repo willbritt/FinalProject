@@ -22,14 +22,14 @@ dataP.then(function(data)
   datasetO = data[0].NBA.Owners;
   datasetC = data[0].NBA.Coaches;
   datasetP2 = data[1].NFL.Players;
+  datasetC2 = data[1].NFL.Coaches;
+  datasetO2 = data[1].NFL.Admin;
+  datasetP3 = data[2].MLB.Players;
+  datasetC3 = data[2].MLB.Managers;
+  datasetO3 = data[2].MLB.Owners;
 
   formattedData = [data[0].Players, data[0].Owners, data[0].Coaches]
   //console.log("formatted data", formattedData);
-
-  //drawChart(dataset,"#chart1", screen, margins);
-  // drawChart(dataset2,"#chart2", screen, margins);
-  // drawChart(dataset3,"#chart3", screen, margins);
-
 },
 
 function(err)
@@ -39,7 +39,7 @@ function(err)
 
 var drawChart = function(dataset,idName,screen,margins,title)
 {
-  //console.log("dataset", dataset);
+  console.log("dataset", dataset);
 
   var graphWidth = screen.width-margins.left-margins.right;
   var graphHeight = screen.height-margins.top-margins.bottom;
@@ -54,7 +54,7 @@ var drawChart = function(dataset,idName,screen,margins,title)
   var series = stack(dataset);
 
   //Data,series
-  //console.log("Series",series);
+  console.log("Series",series);
 
   //Set up scales
   var xScale = d3.scaleBand()
@@ -69,10 +69,10 @@ var drawChart = function(dataset,idName,screen,margins,title)
 
 	var xAxisScale = d3.scaleOrdinal()
                   .domain([d3.min(dataset, function(d) { return d.Year; }),d3.max(dataset, function(d) { return d.Year; })])
-                  // .domain(["1990","1991","1992","1993","1994","1995","1996","1997",
-                  //           "1998","1999","2000","2001","2002","2003","2004","2005",
-                  //         "2006","2007","2008","2009","2010","2011","2012","2013",
-                  //       "2014","2015","2016","2017"])
+                  // .domain([1990,1991,1992,1993,1994,1995,1996,1997,
+                  //           1998,1999,2000,2001,2002,2003,2004,2005,
+                  //         2006,2007,2008,2009,2010,2011,2012,2013,
+                  //       2014,2015,2016,2017])
                   .range([0,graphWidth + dataset.length]); // Includes paddingInner
 
 	var yAxisScale = d3.scaleLinear()
@@ -114,7 +114,6 @@ var drawChart = function(dataset,idName,screen,margins,title)
                   .attr("y", function(d) { return margins.top + yScale(d[1]); })
                   .append("title")
                   .text(function (d,i){ return "Year: " + (1990 + i) + " Value: " + (d[1]-d[0]) + "%";});
-                  //.text(function (d){ return "Value: " + (d[1]-d[0]) + "%";});
 
   var xAxisGraphic = svg.append('g')
                           .attr("class", "axis")
@@ -146,8 +145,6 @@ var drawChart = function(dataset,idName,screen,margins,title)
   toolTip = d3.select("#tooltip");
 
   rects.on("mouseover", function(d){
-          // var xPosition = d3.select(this).node().getBoundingClientRect()["x"] + barWidth;
-          // var yPosition = d3.select(this).node().getBoundingClientRect()["y"] - 50;
           var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.bandwidth() / 2;
           var yPosition = parseFloat(d3.select(this).attr("y")) / 2 + graphHeight / 2;
 
@@ -160,6 +157,7 @@ var drawChart = function(dataset,idName,screen,margins,title)
         .on("mouseout", function() {
           toolTip.classed("hidden", true);
         })
+        
   // legend
   var legendLineWidth = 10;
   var legendLineHeight = 16;
