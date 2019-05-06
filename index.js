@@ -101,6 +101,8 @@ var drawChart = function(dataset,idName,screen,margins,title)
                   .append("g")
                   .style("fill", function(d,i) { return colors(i)});
 
+
+
 // Add a rect for each data value
  var rects = groups.selectAll("rect")
                   .data(function(d) { return d; })
@@ -109,7 +111,10 @@ var drawChart = function(dataset,idName,screen,margins,title)
                   .attr("width", barWidth)
                   .attr("height", function(d) { return yScale(d[0])-yScale(d[1]); })
                   .attr("x",function(d,i) { return margins.left + xScale(i); })
-                  .attr("y", function(d) { return margins.top + yScale(d[1]); });
+                  .attr("y", function(d) { return margins.top + yScale(d[1]); })
+                  .append("title")
+                  .text(function (d,i){ return "Year: " + (1990 + i) + " Value: " + (d[1]-d[0]) + "%";});
+                  //.text(function (d){ return "Value: " + (d[1]-d[0]) + "%";});
 
   var xAxisGraphic = svg.append('g')
                           .attr("class", "axis")
@@ -136,7 +141,26 @@ var drawChart = function(dataset,idName,screen,margins,title)
                       .style("text-decoration", "underline")
                       .style("fill", "Black")
                       .text(title);
-    // legen
+
+  //Tooltip
+  toolTip = d3.select("#tooltip");
+
+  rects.on("mouseover", function(d){
+          // var xPosition = d3.select(this).node().getBoundingClientRect()["x"] + barWidth;
+          // var yPosition = d3.select(this).node().getBoundingClientRect()["y"] - 50;
+          var xPosition = parseFloat(d3.select(this).attr("x")) + xScale.bandwidth() / 2;
+          var yPosition = parseFloat(d3.select(this).attr("y")) / 2 + graphHeight / 2;
+
+  toolTip.style("left", xPosition + "px")
+          .style("top", yPosition + "px")
+          .classed("hidden", false);
+          document.getElementById("tooltip-name").innerText = d.Year;
+          document.getElementById("tooltip-value").innerText = yScale(d[0])-yScale(d[1]);
+        })
+        .on("mouseout", function() {
+          toolTip.classed("hidden", true);
+        })
+  // legend
   var legendLineWidth = 10;
   var legendLineHeight = 16;
   var legendLineMargin = 5;
@@ -148,7 +172,7 @@ var drawChart = function(dataset,idName,screen,margins,title)
                  .attr("transform", "translate(" + (graphWidth + margins.left + 10) + ",0)")
                  .classed("legend", true);
 
-    var keys = ["White", "Black", "Latino", "Asian","Other"]
+  var keys = ["White", "Black", "Latino", "Asian","Other"]
 
    var legendLines = legend.selectAll("g")
                             .data(keys)
