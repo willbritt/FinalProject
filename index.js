@@ -2,8 +2,8 @@ var dataP = d3.json("formattedData.json");
 
 var screen =
 {
-  width: 800,
-  height: 600
+  width: 600,
+  height: 400
 }
 
 var margins =
