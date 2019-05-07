@@ -2,8 +2,8 @@ var dataP = d3.json("formattedData.json");
 
 var screen =
 {
-  width: 600,
-  height: 400
+  width: 800,
+  height: 600
 }
 
 var margins =
@@ -39,7 +39,7 @@ function(err)
 
 var drawChart = function(dataset,idName,screen,margins,title)
 {
-  console.log("dataset", dataset);
+  //console.log("dataset", dataset);
 
   var graphWidth = screen.width-margins.left-margins.right;
   var graphHeight = screen.height-margins.top-margins.bottom;
@@ -54,7 +54,7 @@ var drawChart = function(dataset,idName,screen,margins,title)
   var series = stack(dataset);
 
   //Data,series
-  console.log("Series",series);
+  //console.log("Series",series);
 
   //Set up scales
   var xScale = d3.scaleBand()
@@ -133,13 +133,27 @@ var drawChart = function(dataset,idName,screen,margins,title)
                     });
 
   var chartTitle = groups.append("text")
-                      .attr("x", (graphWidth / 2))
+                      .attr("x", (graphWidth / 2) + margins.left)
                       .attr("y", ((margins.top/2) + 5))
                       .attr("text-anchor", "middle")
                       .style("font-size", "24px")
                       .style("text-decoration", "underline")
                       .style("fill", "Black")
                       .text(title);
+
+  var xLabel = groups.append("text")
+                        .text("Year")
+                        .attr("x", function(){return graphWidth/2 + margins.left})
+                        .attr("y", function(){return graphHeight + margins.top + 50})
+                        .attr("font-size", 25)
+                        .style("fill", "Black");
+
+  var yLabel = groups.append("text")
+                        .text("Composition (%)")
+                        .attr("x", function(){return margins.left - 50})
+                        .attr("y", function(){return margins.top - 10})
+                        .attr("font-size", 20)
+                        .style("fill", "Black");
 
   //Tooltip
   toolTip = d3.select("#tooltip");
@@ -154,10 +168,10 @@ var drawChart = function(dataset,idName,screen,margins,title)
           document.getElementById("tooltip-name").innerText = d.Year;
           document.getElementById("tooltip-value").innerText = yScale(d[0])-yScale(d[1]);
         })
-        .on("mouseout", function() {
+        .on("mouseout", function() {;
           toolTip.classed("hidden", true);
         })
-        
+
   // legend
   var legendLineWidth = 10;
   var legendLineHeight = 16;
